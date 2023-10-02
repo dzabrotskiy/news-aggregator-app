@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Best News Aggregator [Test App]
 
-## Getting Started
+# App built with
+1. `React`
+2. `TypeScript`
+3. `NextJS` (app router)
+4. `NextUI`
+5. `React-Query`
+6. `Styled-Components`
+7. `Tailwind CSS`
+8. `Zustand`
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# How to run
+Project is using `npm`.
+### Locally
+```shell
+# Install deps
+$ npm install
+# run the app
+$ npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Using Docker
+Dockerfile is located in root directory
+```shell
+# Build docker image
+$ docker build -t bna-app .
+# Run docker comtainer
+$ docker run --name bna-container -p 3000:3000 -d bna-app
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Used news sources
+1. `The Guardian`
+2. `New York Times`
+3. `NewsAPI org`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Env
+Env is reading from .env file which stored locally in project
 
-## Learn More
+Also, it's possible to provide env through Docker ENV on build stage
 
-To learn more about Next.js, take a look at the following resources:
+```dotenv
+NEWS_API_ORG_API_KEY=
+THE_GUARDIAN_API_KEY=
+NY_TIMES_API_KEY=
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Notes
+Some important notes about app and integrations:
+1. Some APIs don't have searching by authors and categories

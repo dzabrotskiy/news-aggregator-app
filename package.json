@@ -1,24 +1,45 @@
 {
   "name": "news-aggregator-app",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "author": {
+    "name": "Dan Zabrotski"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier \"./src/**/*.{ts,tsx}\" --write"
   },
   "dependencies": {
+    "@nextui-org/react": "^2.1.13",
+    "@tanstack/react-query": "^4.35.7",
+    "axios": "^1.5.1",
+    "framer-motion": "^10.16.4",
+    "lodash": "^4.17.21",
+    "next": "latest",
+    "query-string": "^8.1.0",
     "react": "latest",
     "react-dom": "latest",
-    "next": "latest"
+    "styled-breakpoints": "^12.1.5",
+    "styled-components": "^6.0.8",
+    "zod": "^3.22.2",
+    "zustand": "^4.4.1"
   },
   "devDependencies": {
-    "typescript": "latest",
-    "@types/react": "latest",
+    "@total-typescript/ts-reset": "^0.5.1",
     "@types/node": "latest",
+    "@types/react": "latest",
     "@types/react-dom": "latest",
+    "@types/styled-components": "^5.1.28",
+    "autoprefixer": "^10.4.16",
     "eslint": "latest",
-    "eslint-config-next": "latest"
+    "eslint-config-next": "latest",
+    "eslint-plugin-import": "^2.28.1",
+    "postcss": "^8.4.31",
+    "prettier": "^3.0.3",
+    "tailwindcss": "^3.3.3",
+    "typescript": "latest"
   }
 }
